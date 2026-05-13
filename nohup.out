@@ -1,0 +1,8 @@
+  0s build_web_compilers:entrypoint_marker on 1 input; web/$web$
+  0s build_web_compilers:entrypoint_marker on 1 input: 1 skipped
+  0s build_web_compilers:entrypoint on 1 input; web/main.dart
+  0s build_web_compilers:ddc (lazy); web|lib/src/dom.ddc.module
+  0s build_web_compilers:entrypoint on 1 input: 1 skipped
+  Built with build_runner/aot in 2s; wrote 0 outputs.
+  Serving `web` on http://localhost:8080
+Exiting as requested by another build_runner process.

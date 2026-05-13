@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
+    <title>Dart Grade Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.dart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Dart Grade Calculator</h1>
+    <p class="subtitle">Compute your term grade below:</p>
+
+    <!-- Input Section -->
+    <div class="card" id="input-card">
+      <h2>Student Information</h2>
+
+      <div class="form-group">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" placeholder="Enter Name Here">
+      </div>
+
+      <div class="form-group">
+        <label for="term-select">Select Term:</label>
+        <select id="term-select">
+          <option value="prelims">Prelims</option>
+          <option value="midterms">Midterms</option>
+          <option value="finals">Finals</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="prev-grade-group" style="display: none;">
+        <label for="prev-grade">Previous Term Grade:</label>
+        <input type="number" id="prev-grade" min="0" max="100" step="0.01" placeholder="Enter Previous Term Grade">
+      </div>
+
+      <hr>
+
+      <h2>Quiz and Exam Scores</h2>
+
+      <div class="form-group">
+        <label for="quiz-score">Quiz Score:</label>
+        <input type="number" id="quiz-score" min="0" step="0.5" placeholder="Enter Quiz Score">
+      </div>
+
+      <div class="form-group">
+        <label for="quiz-total">Quiz Total:</label>
+        <input type="number" id="quiz-total" min="1" step="0.5" placeholder="Enter Quiz Total">
+      </div>
+
+      <div class="form-group">
+        <label for="exam-score">Exam Score:</label>
+        <input type="number" id="exam-score" min="0" step="0.5" placeholder="Enter Exam Score">
+      </div>
+
+      <div class="form-group">
+        <label for="exam-total">Exam Total:</label>
+        <input type="number" id="exam-total" min="1" step="0.5" placeholder="Enter Exam Total">
+      </div>
+
+      <button id="compute-btn" class="btn">Compute Grade</button>
+    </div>
+
+    <!-- Results Section -->
+    <div class="card" id="result-card" style="display: none;">
+      <h2>Results</h2>
+      <div id="result-content"></div>
+      <button id="reset-btn" class="btn btn-secondary">Reset</button>
+    </div>
+
+    <!-- Grade Ledger Section -->
+    <div class="card" id="ledger-card" style="display: none;">
+      <h2>Grade Ledger</h2>
+      <div id="ledger-content"></div>
+    </div>
+
+    <div id="error-msg" class="error-msg"></div>
+  </div>
+
+</body>
+</html>
