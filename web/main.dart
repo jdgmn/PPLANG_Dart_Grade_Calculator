@@ -121,7 +121,7 @@ String buildResultString({
   sb.writeln('  Status:        ${passing ? 'PASSED' : 'FAILED'}');
   sb.writeln('  Remark:        $remark');
   if (computationCount > 1) {
-    sb.writeln('  Computed:      ${computationCount} time(s)');
+    sb.writeln('  Computed:      $computationCount time(s)');
   }
   sb.writeln('----------------------------------------');
 
